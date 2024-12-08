@@ -1,3 +1,53 @@
+/* Sección de Respira y Despierta */
+#youtube {
+    background-color: #E3F2FD; /* Azul claro relajante */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.youtube-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#youtube h2 {
+    font-size: 3rem;
+    color: #0D47A1; /* Azul oscuro */
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.4rem;
+    color: #1A237E; /* Azul profundo */
+    margin-bottom: 3rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.video-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.video-item {
+    flex: 0 0 320px;
+    scroll-snap-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 180px;
+    border: none;
+    border-radius: 10px;
+}
+
 /* Sección de Tienda */
 #store {
     background-color: #F9FBE7; /* Fondo suave y calmante */
