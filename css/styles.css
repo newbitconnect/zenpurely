@@ -1,4 +1,4 @@
-/* Sección de Horóscopo Negro */
+/* Ajustes para Horóscopo Negro */
 #horoscope {
     background-color: #ECEFF1; /* Fondo gris claro */
     padding: 4rem 2rem;
@@ -15,25 +15,26 @@
     color: #263238; /* Gris oscuro */
     margin-bottom: 1rem;
     font-weight: bold;
-    text-align: center; /* Centra el título */
+    text-align: center;
 }
 
-
-.description {
+#horoscope .description {
     font-size: 1.4rem;
     color: #37474F; /* Gris profundo */
     margin-bottom: 3rem;
     line-height: 1.8;
     font-style: italic;
+    text-align: center; /* Centra la descripción */
 }
 
+/* Centrar el carrusel de videos */
 .video-carousel {
     display: flex;
+    justify-content: center; /* Centra los videos horizontalmente */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 2rem;
     padding: 1rem 0;
-    justify-content: center;
 }
 
 .video-item {
@@ -51,6 +52,7 @@
     border: none;
     border-radius: 10px;
 }
+
 
 /* Sección de Brutally Honest */
 #tiktok {
