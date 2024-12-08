@@ -66,32 +66,33 @@ header {
     color: #fff;
 }
 
-/* === MENÚ RESPONSIVO === */
+/* === MENÚ RESPONSIVO MEJORADO === */
 nav {
-    background-color: #2E7D32; /* Fondo del menú */
+    background-color: #E8F5E9; /* Fondo verde claro */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* Espacia los elementos */
     align-items: center;
     padding: 1rem 2rem;
-}
-
-.menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Efecto suave */
 }
 
 .menu li a {
-    color: #FFFFFF; /* Texto blanco */
+    color: #1B5E20; /* Verde oscuro */
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease; /* Efecto suave */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Efecto al pasar el ratón */
 .menu li a:hover {
-    color: #A5D6A7; /* Verde claro */
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    background-color: #A5D6A7; /* Verde claro */
+    color: #FFFFFF; /* Texto blanco */
+    transform: scale(1.1); /* Pequeña ampliación */
 }
 
 /* Botón para menú móvil */
@@ -102,7 +103,7 @@ nav {
 }
 
 .menu-toggle .bar {
-    background-color: #FFFFFF;
+    background-color: #1B5E20; /* Verde oscuro */
     height: 3px;
     width: 25px;
     margin: 3px 0;
@@ -110,7 +111,7 @@ nav {
 }
 
 .menu-toggle:hover .bar {
-    background-color: #81C784;
+    background-color: #81C784; /* Verde claro */
 }
 
 /* === RESPONSIVE === */
@@ -139,7 +140,6 @@ nav {
         display: flex; /* Muestra el botón para dispositivos móviles */
     }
 }
-
 /* ===================
    ENCABEZADO PRINCIPAL CON LOGOTIPO
    =================== */
