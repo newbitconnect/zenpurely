@@ -130,9 +130,27 @@ nav {
         margin: 1rem 0;
     }
 
+    /* Estilo del botón para dispositivos móviles */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: #1B5E20;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+/* Responsivo: activa el botón en móviles */
+@media (max-width: 768px) {
     .menu-toggle {
-        display: flex; /* Muestra el botón para dispositivos móviles */
+        display: flex; /* Muestra el botón */
     }
+}
 }
 
 /* ===================
