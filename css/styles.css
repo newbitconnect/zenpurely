@@ -452,12 +452,16 @@ nav {
     scroll-snap-type: x mandatory; /* Scroll "suave" */
     gap: 1rem;
     padding: 1rem;
-    white-space: nowrap; /* Evita que los elementos se envuelvan */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    max-width: 100vw; /* Evita que se desborde horizontalmente */
+    white-space: normal; /* Permite envolver elementos si es necesario */
 }
 
 .tiktok-item {
-    flex: 0 0 300px; /* Ancho fijo en formato 9:16 */
-    height: 533px; /* Alto proporcional al formato 9:16 */
+    flex: 0 0 auto;
+    width: 300px; /* Ancho fijo */
+    height: auto; /* Altura automática */
+    aspect-ratio: 9 / 16; /* Mantiene la relación de aspecto */
     scroll-snap-align: center; /* Asegura alineación al deslizar */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
@@ -476,13 +480,14 @@ nav {
 
 /* Ajustes responsivos */
 @media (max-width: 768px) {
-    .tiktok-item {
-        flex: 0 0 90%; /* Reduce el tamaño del contenedor */
-        height: auto; /* Ajusta la altura automáticamente */
+    .tiktok-carousel {
+        gap: 1rem; /* Mantén al menos 1rem */
     }
 
-    .tiktok-carousel {
-        gap: 0.5rem; /* Espacio más reducido entre videos */
+    .tiktok-item {
+        flex: 0 0 80%; /* Reduce ligeramente el ancho */
     }
+}
+
 }
 
