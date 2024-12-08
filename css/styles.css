@@ -115,10 +115,12 @@ nav {
         flex-direction: column; /* Configura los elementos en columna */
         position: absolute;
         top: 70px;
-        right: 0;
-        background-color: #2E7D32; /* Fondo verde oscuro */
+        left: 0;
+        background-color: #A5D6A7; /* Verde claro */
         width: 100%; /* Ocupa todo el ancho */
-        padding: 1rem;
+        padding: 1rem 0;
+        z-index: 1000;
+        border-radius: 0 0 10px 10px; /* Bordes redondeados inferiores */
     }
 
     .menu.active {
@@ -135,14 +137,47 @@ nav {
     display: none; /* Oculto por defecto */
     flex-direction: column;
     cursor: pointer;
+    justify-content: center; /* Centra las barras */
+    align-items: center; /* Centra las barras */
+    width: 35px; /* Tamaño del botón */
+    height: 35px;
+    background-color: #A5D6A7; /* Fondo verde claro */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Estilo de las barras del botón */
 .menu-toggle .bar {
-    background-color: #1B5E20;
+    background-color: #1B5E20; /* Color verde oscuro para las barras */
     height: 3px;
     width: 25px;
     margin: 3px 0;
     transition: all 0.3s ease;
+}
+
+/* Hover en el botón */
+.menu-toggle:hover {
+    background-color: #81C784; /* Verde más oscuro al pasar el ratón */
+    transform: scale(1.1); /* Pequeña ampliación */
+}
+
+/* Estado activo (cuando el menú está desplegado) */
+.menu-toggle.active {
+    background-color: #388E3C; /* Verde intenso para indicar el estado activo */
+}
+
+/* Estado activo de las barras (transformación cruzada) */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(6px); /* Rotación para la primera barra */
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0; /* Oculta la barra del medio */
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-6px); /* Rotación para la última barra */
 }
 
 /* Responsivo: activa el botón en móviles */
