@@ -1,21 +1,28 @@
-/* Encabezado Principal */
+/* Logotipo Redondo Encima del Encabezado */
 #main-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+    text-align: center; /* Centra el contenido del encabezado */
+    margin-top: 6rem; /* Espacio adicional debajo del logotipo */
+    padding: 1rem;
     background-color: #E8F5E9; /* Fondo suave */
     border-bottom: 1px solid #DCE775; /* Línea decorativa */
 }
 
 .logo img {
-    height: 60px; /* Ajusta el tamaño del logotipo */
-    max-width: 100%;
+    width: 100px; /* Tamaño del logotipo */
+    height: 100px; /* Altura igual al ancho */
+    border-radius: 50%; /* Hace el logotipo redondo */
+    border: 4px solid #4CAF50; /* Borde verde decorativo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin-top: -50px; /* Mueve el logotipo hacia arriba */
+    background-color: #FFF; /* Fondo blanco para el logotipo */
+    display: inline-block;
 }
 
 nav {
     display: flex;
+    justify-content: center; /* Centra el menú */
     gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 nav a {
@@ -29,6 +36,7 @@ nav a {
 nav a:hover {
     color: #4CAF50; /* Verde claro */
 }
+
 
 <!DOCTYPE html>
 <html lang="en">
