@@ -317,20 +317,22 @@ nav {
    =================== */
 .video-carousel {
     display: flex;
-    justify-content: center;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 2rem;
-    padding: 1rem 0;
+    justify-content: flex-start; /* Alinea los videos al principio */
+    overflow-x: auto; /* Activa el desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Scroll "suave" */
+    gap: 1rem;
+    padding: 1rem;
+    white-space: nowrap; /* Evita que los elementos se envuelvan */
 }
 
 .video-item {
-    flex: 0 0 560px;
+    flex: 0 0 560px; /* Tamaño fijo en formato 16:9 */
     height: 315px;
-    scroll-snap-align: center;
+    scroll-snap-align: center; /* Asegura alineación al deslizar */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     overflow: hidden;
+    background-color: #E3F2FD; /* Fondo azul claro */
 }
 
 .video-item iframe {
@@ -343,6 +345,17 @@ nav {
     .video-item {
         flex: 0 0 100%;
         height: auto;
+    }
+
+    .video-carousel {
+        gap: 1rem;
+    }
+}
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .video-item {
+        flex: 0 0 90%; /* Reduce el tamaño en pantallas pequeñas */
+        height: auto; /* Ajusta la altura automáticamente */
     }
 
     .video-carousel {
