@@ -1,3 +1,50 @@
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center; /* Centra las entradas */
+}
+
+.blog-item {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.blog-item h3 {
+    font-size: 1.4rem;
+    color: #1B5E20; /* Verde oscuro */
+    margin-bottom: 0.5rem;
+}
+
+.blog-item p {
+    font-size: 1rem;
+    color: #616161; /* Gris */
+    margin-bottom: 1rem;
+}
+
+.blog-item .button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(90deg, #4CAF50, #81C784);
+    color: #FFF8E1;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.blog-item .button:hover {
+    background: linear-gradient(90deg, #388E3C, #66BB6A);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
 /* Sección de Blog */
 #blog {
     background-color: #FFF8E1; /* Fondo cálido */
