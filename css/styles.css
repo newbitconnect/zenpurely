@@ -27,7 +27,7 @@
     text-align: center; /* Centra la descripción */
 }
 
-/* Centrar el carrusel de videos */
+/* Ajustes para el carrusel de videos en Horóscopo Negro */
 .video-carousel {
     display: flex;
     justify-content: center; /* Centra los videos horizontalmente */
@@ -38,8 +38,8 @@
 }
 
 .video-item {
-    flex: 0 0 315px; /* Ancho para formato 9:16 */
-    height: 560px; /* Altura para formato 9:16 */
+    flex: 0 0 560px; /* Ancho para formato 16:9 */
+    height: 315px; /* Altura para formato 16:9 */
     scroll-snap-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,6 +52,7 @@
     border: none;
     border-radius: 10px;
 }
+
 
 
 /* Sección de Brutally Honest */
