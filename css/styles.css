@@ -437,7 +437,7 @@ nav {
 }
 
 .ynf-container {
-    max-width: 800px; /* Ancho máximo */
+    max-width: 1000px; /* Ancho máximo */
     margin: 0 auto; /* Centra el contenido */
     text-align: center;
 }
@@ -457,29 +457,41 @@ nav {
     font-style: italic;
 }
 
-/* Botones para redes sociales */
-.ynf-links {
+/* Contenedor para los embeds */
+.social-embed-container {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+    flex-wrap: wrap; /* Permite varias filas en pantallas pequeñas */
+    justify-content: center; /* Centra el contenido */
+    gap: 2rem; /* Espaciado entre los embeds */
 }
 
-.ynf-links .button {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    background: linear-gradient(90deg, #4CAF50, #81C784);
-    color: #FFFFFF;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
+/* Estilo del embed de Instagram */
+.instagram-embed, .tiktok-embed {
+    flex: 1 1 45%; /* Cada embed ocupa 45% del ancho */
+    max-width: 500px; /* Ancho máximo */
+    margin: 0 auto; /* Centra cada embed */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que no se desborde */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-.ynf-links .button:hover {
-    background: linear-gradient(90deg, #388E3C, #66BB6A);
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+.instagram-embed iframe,
+.tiktok-embed iframe {
+    width: 100%; /* Ocupa todo el ancho */
+    height: 600px; /* Ajusta la altura */
+    border: none; /* Sin bordes */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .social-embed-container {
+        flex-direction: column; /* Los coloca en columna en móviles */
+    }
+
+    .instagram-embed, .tiktok-embed {
+        flex: 1 1 100%; /* Cada embed ocupa todo el ancho */
+        max-width: 100%; /* Se adapta a pantallas pequeñas */
+    }
 }
 
 /* ===================
