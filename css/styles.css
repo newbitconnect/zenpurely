@@ -66,17 +66,25 @@ header {
     color: #fff;
 }
 
-/* === MENÚ RESPONSIVO MEJORADO === */
+/* MENÚ DESKTOP */
 nav {
     background-color: #E8F5E9; /* Fondo verde claro */
     display: flex;
-    justify-content: space-around; /* Espacia los elementos */
+    justify-content: space-around; /* Distribuye los elementos */
     align-items: center;
-    flex-direction: row;
+    flex-direction: row; /* Configura en fila para escritorio */
     padding: 1rem 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     border-radius: 10px; /* Bordes redondeados */
     transition: all 0.3s ease; /* Efecto suave */
+}
+
+.menu {
+    display: flex; /* Mantiene los elementos en fila por defecto */
+    list-style: none; /* Elimina viñetas */
+    gap: 2rem; /* Espaciado entre elementos */
+    margin: 0;
+    padding: 0;
 }
 
 .menu li a {
@@ -89,43 +97,32 @@ nav {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Efecto al pasar el ratón */
 .menu li a:hover {
     background-color: #A5D6A7; /* Verde claro */
     color: #FFFFFF; /* Texto blanco */
-    transform: scale(1.1); /* Pequeña ampliación */
+    transform: scale(1.1); /* Efecto de ampliación */
 }
 
-/* Botón para menú móvil */
-.menu-toggle {
-    display: none; /* Oculto por defecto */
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle .bar {
-    background-color: #1B5E20; /* Verde oscuro */
-    height: 3px;
-    width: 25px;
-    margin: 3px 0;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.menu-toggle:hover .bar {
-    background-color: #81C784; /* Verde claro */
-}
-
-/* === RESPONSIVE === */
+/* MENÚ MÓVIL */
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Cambia a columna en móviles */
+        align-items: flex-start; /* Alinea a la izquierda */
+    }
+
     .menu {
         display: none; /* Oculta el menú por defecto */
-        flex-direction: column;
+        flex-direction: column; /* Configura los elementos en columna */
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: #2E7D32;
-        width: 100%;
+        background-color: #2E7D32; /* Fondo verde oscuro */
+        width: 100%; /* Ocupa todo el ancho */
         padding: 1rem;
+    }
+
+    .menu.active {
+        display: flex; /* Muestra el menú al hacer clic */
     }
 
     .menu li {
@@ -133,14 +130,11 @@ nav {
         margin: 1rem 0;
     }
 
-    .menu.active {
-        display: flex; /* Muestra el menú al hacer clic */
-    }
-
     .menu-toggle {
         display: flex; /* Muestra el botón para dispositivos móviles */
     }
 }
+
 /* ===================
    ENCABEZADO PRINCIPAL CON LOGOTIPO
    =================== */
