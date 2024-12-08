@@ -118,7 +118,7 @@ nav {
 @media (max-width: 768px) {
     .menu {
         display: none; /* Oculta el menú por defecto */
-        flex-direction: column;
+        flex-direction: row;
         position: absolute;
         top: 70px;
         right: 0;
