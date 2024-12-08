@@ -18,7 +18,8 @@ footer {
     text-align: center;
     padding: 1rem;
     background: #2E7D32; /* Fondo verde oscuro */
-    color: #1B5E20; /* Texto en verde oscuro */
+    color: #FFFFFF
+; /* Texto en verde oscuro */
 }
 
 footer a {
