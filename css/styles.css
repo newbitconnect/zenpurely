@@ -278,6 +278,12 @@ nav {
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
+.section-container {
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 1rem; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
+}
 
 /* ===================
    SCROLL DE IMÁGENES
