@@ -111,7 +111,7 @@ nav {
     }
 
     .menu {
-        display: flex; /* Oculta el menú por defecto */
+        display: none; /* Oculta el menú por defecto */
         flex-direction: column; /* Configura los elementos en columna */
         position: absolute;
         top: 70px;
