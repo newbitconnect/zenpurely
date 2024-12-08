@@ -63,21 +63,75 @@ header {
     color: #fff;
 }
 
-nav ul {
+/* === MENÚ RESPONSIVO === */
+nav {
+    background-color: #2E7D32; /* Fondo del menú */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.menu {
+    display: flex;
     list-style: none;
-    background: #2E7D32;
-    padding: 1rem 0;
+    gap: 2rem;
 }
 
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #FFF8E1;
+.menu li a {
+    color: #FFFFFF; /* Texto blanco */
     text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Efecto suave */
+}
+
+/* Efecto al pasar el ratón */
+.menu li a:hover {
+    color: #A5D6A7; /* Verde claro */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Botón para menú móvil */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: #FFFFFF;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Oculta el menú por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #2E7D32;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .menu.active {
+        display: flex; /* Muestra el menú al hacer clic */
+    }
+
+    .menu-toggle {
+        display: flex; /* Muestra el botón para dispositivos móviles */
+    }
 }
 
 /* ===================
