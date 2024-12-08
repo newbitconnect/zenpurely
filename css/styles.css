@@ -131,6 +131,23 @@ nav {
         text-align: center;
         margin: 1rem 0;
     }
+   
+/* Estilo para los enlaces del menú móvil */
+.menu li a {
+    color: #FFFFFF; /* Letras blancas */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Hover para enlaces del menú móvil */
+.menu li a:hover {
+    background-color: #81C784; /* Verde más oscuro */
+    color: #FFFFFF; /* Mantén letras blancas */
+}
 
     /* Estilo del botón para dispositivos móviles */
 .menu-toggle {
