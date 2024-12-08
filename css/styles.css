@@ -72,6 +72,7 @@ nav {
     display: flex;
     justify-content: space-around; /* Espacia los elementos */
     align-items: center;
+    flex-direction: row;
     padding: 1rem 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     border-radius: 10px; /* Bordes redondeados */
