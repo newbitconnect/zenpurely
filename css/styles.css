@@ -11,10 +11,11 @@
 }
 
 #store h2 {
-    font-size: 3rem;
-    color: #1B5E20; /* Verde oscuro */
+    font-size: 3rem; /* Tamaño grande para destacar */
+    color: #1B5E20;
     margin-bottom: 1rem;
     font-weight: bold;
+    text-align: center;
 }
 
 .description {
