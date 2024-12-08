@@ -146,16 +146,20 @@
 }
 
 .youtube-container {
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1000px; /* Amplía el ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+    text-align: center; /* Asegura que el texto esté alineado */
+    padding: 2rem; /* Espaciado interno */
 }
 
-#youtube h2 {
-    font-size: 3rem;
-    color: #0D47A1; /* Azul oscuro */
-    margin-bottom: 1rem;
-    font-weight: bold;
+
+#youtube h2,
+#youtube .description {
+    max-width: 800px; /* Limita el ancho del texto */
+    margin: 0 auto; /* Centra el texto */
+    text-align: center; /* Alinea el texto dentro del espacio */
 }
+
 
 .description {
     font-size: 1.4rem;
@@ -167,26 +171,31 @@
 
 .video-carousel {
     display: flex;
+    justify-content: center; /* Centra los videos horizontalmente */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 2rem;
     padding: 1rem 0;
 }
 
+
+
 .video-item {
-    flex: 0 0 320px;
+    flex: 0 0 560px; /* Ancho adecuado para formato 16:9 */
+    height: 315px; /* Altura adecuada para formato 16:9 */
     scroll-snap-align: center;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
 }
 
 .video-item iframe {
     width: 100%;
-    height: 180px;
+    height: 100%;
     border: none;
     border-radius: 10px;
 }
+
 
 /* Sección de Tienda */
 #store {
