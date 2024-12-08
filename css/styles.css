@@ -1,3 +1,36 @@
+/* TÍTULOS DE TODAS LAS SECCIONES */
+h2 {
+    font-size: 3rem; /* Mismo tamaño que el título de inicio */
+    color: #1B5E20; /* Verde oscuro */
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Títulos con palabras destacadas en verde brillante */
+h2 .highlight {
+    color: #4CAF50; /* Verde brillante */
+    font-size: 1.1em;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #2E7D32; /* Fondo verde oscuro */
+    color: #1B5E20; /* Texto en verde oscuro */
+}
+
+footer a {
+    color: #4CAF50; /* Enlaces en verde brillante */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #81C784; /* Verde más claro al pasar el ratón */
+}
+
 /* ===================
    ESTILOS GENERALES
    =================== */
