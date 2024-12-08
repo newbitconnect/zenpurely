@@ -11,12 +11,13 @@
 }
 
 #horoscope h2 {
-    font-size: 3rem; /* Mismo tamaño que Respira y Despierta */
+    font-size: 3rem; /* Mismo tamaño que Brutally Honest */
     color: #263238; /* Gris oscuro */
     margin-bottom: 1rem;
     font-weight: bold;
-    text-align: center;
+    text-align: center; /* Centra el título */
 }
+
 
 .description {
     font-size: 1.4rem;
