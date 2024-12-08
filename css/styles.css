@@ -494,6 +494,31 @@ nav {
         max-width: 100%; /* Se adapta a pantallas pequeñas */
     }
 }
+.follow-tiktok {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.follow-tiktok a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff; /* Letras blancas */
+    background: #000000; /* Fondo negro */
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.follow-tiktok a:hover {
+    background: #333333; /* Fondo negro más claro al pasar el ratón */
+    color: #e0e0e0; /* Letras gris claro al pasar el ratón */
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 /* ===================
    SECCIÓN DE VIDEOS TIKTOK
