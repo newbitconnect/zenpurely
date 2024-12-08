@@ -1,467 +1,95 @@
-/* Logotipo Redondo Encima del Encabezado */
+/* ===================
+   ESTILOS GENERALES
+   =================== */
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #2E7D32;
+    background-color: #F0F0F0;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===================
+   ENCABEZADO Y MENÚ
+   =================== */
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #A8E6CF;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: #2E7D32;
+    padding: 1rem 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #FFF8E1;
+    text-decoration: none;
+}
+
+/* ===================
+   ENCABEZADO PRINCIPAL CON LOGOTIPO
+   =================== */
 #main-header {
-    text-align: center; /* Centra el contenido del encabezado */
-    margin-top: 6rem; /* Espacio adicional debajo del logotipo */
+    text-align: center;
+    margin-top: 6rem;
     padding: 1rem;
-    background-color: #E8F5E9; /* Fondo suave */
-    border-bottom: 1px solid #DCE775; /* Línea decorativa */
+    background-color: #E8F5E9;
+    border-bottom: 1px solid #DCE775;
 }
 
 .logo img {
-    width: 100px; /* Tamaño del logotipo */
-    height: 100px; /* Altura igual al ancho */
-    border-radius: 50%; /* Hace el logotipo redondo */
-    border: 4px solid #4CAF50; /* Borde verde decorativo */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    margin-top: -50px; /* Mueve el logotipo hacia arriba */
-    background-color: #FFF; /* Fondo blanco para el logotipo */
-    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #4CAF50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: -50px;
+    background-color: #FFF;
 }
 
 nav {
     display: flex;
-    justify-content: center; /* Centra el menú */
+    justify-content: center;
     gap: 1.5rem;
     margin-top: 1rem;
 }
 
 nav a {
-    text-decoration: none;
-    font-size: 1rem;
     color: #1B5E20;
+    font-size: 1rem;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #4CAF50; /* Verde claro */
+    color: #4CAF50;
 }
 
-.blog-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center; /* Centra las entradas */
-}
-
-.blog-item {
-    background: #FFFFFF;
-    border: 1px solid #E0E0E0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 1.5rem;
-    text-align: left;
-}
-
-.blog-item h3 {
-    font-size: 1.4rem;
-    color: #1B5E20; /* Verde oscuro */
-    margin-bottom: 0.5rem;
-}
-
-.blog-item p {
-    font-size: 1rem;
-    color: #616161; /* Gris */
-    margin-bottom: 1rem;
-}
-
-.blog-item .button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background: linear-gradient(90deg, #4CAF50, #81C784);
-    color: #FFF8E1;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.blog-item .button:hover {
-    background: linear-gradient(90deg, #388E3C, #66BB6A);
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Sección de Blog */
-#blog {
-    background-color: #FFF8E1; /* Fondo cálido */
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.blog-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-#blog h2 {
-    font-size: 3rem; /* Mismo tamaño que las otras secciones */
-    color: #2E7D32; /* Verde oscuro */
-    margin-bottom: 1rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.description {
-    font-size: 1.4rem;
-    color: #4E342E; /* Marrón tierra */
-    margin-bottom: 3rem;
-    line-height: 1.8;
-    font-style: italic;
-    text-align: center;
-}
-
-/* Grid de entradas del blog */
-.blog-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center; /* Centra los elementos en el grid */
-}
-
-.blog-item {
-    background: #FFFFFF;
-    border: 1px solid #E0E0E0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 1.5rem;
-    text-align: left;
-}
-
-.blog-item h3 {
-    font-size: 1.4rem;
-    color: #1B5E20; /* Verde oscuro */
-    margin-bottom: 0.5rem;
-}
-
-.blog-item p {
-    font-size: 1rem;
-    color: #616161; /* Gris */
-    margin-bottom: 1rem;
-}
-
-.blog-item .button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background: linear-gradient(90deg, #4CAF50, #81C784);
-    color: #FFF8E1;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.blog-item .button:hover {
-    background: linear-gradient(90deg, #388E3C, #66BB6A);
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Ajustes para Horóscopo Negro */
-#horoscope {
-    background-color: #ECEFF1; /* Fondo gris claro */
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.horoscope-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-#horoscope h2 {
-    font-size: 3rem; /* Mismo tamaño que Brutally Honest */
-    color: #263238; /* Gris oscuro */
-    margin-bottom: 1rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-#horoscope .description {
-    font-size: 1.4rem;
-    color: #37474F; /* Gris profundo */
-    margin-bottom: 3rem;
-    line-height: 1.8;
-    font-style: italic;
-    text-align: center; /* Centra la descripción */
-}
-
-/* Ajustes para el carrusel de videos en Horóscopo Negro */
-.video-carousel {
-    display: flex;
-    justify-content: center; /* Centra los videos horizontalmente */
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 2rem;
-    padding: 1rem 0;
-}
-
-.video-item {
-    flex: 0 0 560px; /* Ancho para formato 16:9 */
-    height: 315px; /* Altura para formato 16:9 */
-    scroll-snap-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.video-item iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 10px;
-}
-
-
-
-/* Sección de Brutally Honest */
-#tiktok {
-    background-color: #FBE9E7; /* Fondo cálido y energizante */
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.tiktok-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-#tiktok h2 {
-    font-size: 3rem;
-    color: #D84315; /* Naranja vibrante */
-    margin-bottom: 1rem;
-    font-weight: bold;
-}
-
-.description {
-    font-size: 1.4rem;
-    color: #BF360C; /* Naranja profundo */
-    margin-bottom: 3rem;
-    line-height: 1.8;
-    font-style: italic;
-}
-
-.video-carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 2rem;
-    padding: 1rem 0;
-}
-
-.video-item {
-    flex: 0 0 280px; /* Ajuste para videos verticales */
-    height: 500px; /* Altura para formato TikTok */
-    scroll-snap-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.video-item iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 10px;
-}
-
-/* Sección de Respira y Despierta */
-#youtube {
-    background-color: #E3F2FD; /* Azul claro relajante */
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.youtube-container {
-    max-width: 1000px; /* Amplía el ancho máximo */
-    margin: 0 auto; /* Centra horizontalmente */
-    text-align: center; /* Asegura que el texto esté alineado */
-    padding: 2rem; /* Espaciado interno */
-}
-
-
-#youtube h2,
-#youtube .description {
-    max-width: 800px; /* Limita el ancho del texto */
-    margin: 0 auto; /* Centra el texto */
-    text-align: center; /* Alinea el texto dentro del espacio */
-}
-
-
-.description {
-    font-size: 1.4rem;
-    color: #1A237E; /* Azul profundo */
-    margin-bottom: 3rem;
-    line-height: 1.8;
-    font-style: italic;
-}
-
-.video-carousel {
-    display: flex;
-    justify-content: center; /* Centra los videos horizontalmente */
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 2rem;
-    padding: 1rem 0;
-}
-
-
-
-.video-item {
-    flex: 0 0 560px; /* Ancho adecuado para formato 16:9 */
-    height: 315px; /* Altura adecuada para formato 16:9 */
-    scroll-snap-align: center;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-}
-
-.video-item iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 10px;
-}
-
-
-/* Sección de Tienda */
-#store {
-    background-color: #F9FBE7; /* Fondo suave y calmante */
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.store-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-#store h2 {
-    font-size: 3rem; /* Tamaño grande para destacar */
-    color: #1B5E20;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.description {
-    font-size: 1.4rem;
-    color: #4E342E; /* Marrón tierra */
-    margin-bottom: 3rem;
-    line-height: 1.8;
-    font-style: italic;
-}
-
-.product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-}
-
-.product-item {
-    background: #FFFFFF;
-    border: 1px solid #E0E0E0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 1rem;
-    text-align: center;
-}
-
-.product-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
-
-.product-item h3 {
-    font-size: 1.5rem;
-    color: #2E7D32; /* Verde */
-    margin-bottom: 0.5rem;
-}
-
-.product-item p {
-    font-size: 1rem;
-    color: #616161; /* Gris */
-    margin-bottom: 1rem;
-}
-
-.product-item .button {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    background: linear-gradient(90deg, #4CAF50, #81C784);
-    color: #FFF8E1;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 30px;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.product-item .button:hover {
-    background: linear-gradient(90deg, #388E3C, #66BB6A);
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
+/* ===================
+   SECCIÓN DE INICIO
+   =================== */
 #home {
-    background-color: #E8F5E9; /* Verde claro y calmante */
-    padding: 2rem 2rem; /* Reducir el espacio de padding */
-    text-align: center;
-    margin-top: -1rem; /* Opcional: Reduce aún más la distancia */
-}
-
-.home-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Scroll de Imágenes */
-#image-scroll {
-    background-color: #F9FBE7;
-    padding: 2rem 0;
-    overflow: hidden;
-}
-
-.scroll-container {
-    display: flex;
-    gap: 1.5rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 1rem;
-}
-
-.scroll-item {
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.scroll-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.scroll-item img:hover {
-    transform: scale(1.05);
-}
-
-/* Sección de Inicio */
-#home {
-    background-color: #E8F5E9; /* Verde claro y calmante */
+    background-color: #E8F5E9;
     padding: 4rem 2rem;
     text-align: center;
 }
@@ -473,19 +101,19 @@ nav a:hover {
 
 #home h2 {
     font-size: 3rem;
-    color: #1B5E20; /* Verde oscuro */
+    color: #1B5E20;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
 .highlight {
-    color: #4CAF50; /* Verde brillante */
+    color: #4CAF50;
     font-size: 1.1em;
 }
 
 .description {
     font-size: 1.4rem;
-    color: #4E342E; /* Marrón tierra para calidez */
+    color: #4E342E;
     margin-bottom: 2rem;
     line-height: 1.8;
     font-style: italic;
@@ -510,44 +138,186 @@ nav a:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* ===================
+   SCROLL DE IMÁGENES
+   =================== */
+#image-scroll {
+    background-color: #F9FBE7;
+    padding: 2rem 0;
+    overflow: hidden;
+}
 
-body {
-    font-family: 'Lato', sans-serif;
-    line-height: 1.6;
-    color: #2E7D32;
-    background-color: #F0F0F0;
-    margin: 0;
-    padding: 0;
+.scroll-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
 }
-header {
+
+.scroll-item {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.scroll-item img:hover {
+    transform: scale(1.05);
+}
+
+/* ===================
+   SECCIÓN DE TIENDA
+   =================== */
+#store {
+    background-color: #F9FBE7;
+    padding: 4rem 2rem;
     text-align: center;
-    padding: 2rem;
-    background-color: #A8E6CF;
-    color: #fff;
 }
-nav ul {
+
+.store-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#store h2 {
+    font-size: 3rem;
+    color: #1B5E20;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.product-item {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.product-item img {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.product-item h3 {
+    font-size: 1.5rem;
+    color: #2E7D32;
+    margin-bottom: 0.5rem;
+}
+
+.product-item p {
+    font-size: 1rem;
+    color: #616161;
+    margin-bottom: 1rem;
+}
+
+.product-item .button {
+    padding: 0.8rem 2rem;
+}
+
+/* ===================
+   SECCIÓN DE YOUTUBE (RESPIRA Y DESPIERTA)
+   =================== */
+#youtube {
+    background-color: #E3F2FD;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.youtube-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ===================
+   CARRUSEL DE VIDEOS
+   =================== */
+.video-carousel {
     display: flex;
     justify-content: center;
-    list-style: none;
-    background: #2E7D32;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
     padding: 1rem 0;
 }
-nav ul li {
-    margin: 0 1rem;
+
+.video-item {
+    flex: 0 0 560px;
+    height: 315px;
+    scroll-snap-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
-nav ul li a {
-    color: #FFF8E1;
-    text-decoration: none;
+
+.video-item iframe {
+    border: none;
 }
-main {
-    padding: 2rem;
-}
-section {
-    margin: 2rem 0;
-}
-footer {
+
+/* ===================
+   SECCIÓN DE BLOG
+   =================== */
+#blog {
+    background-color: #FFF8E1;
+    padding: 4rem 2rem;
     text-align: center;
-    padding: 1rem;
-    background: #2E7D32;
-    color: #FFF8E1;
 }
+
+.blog-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.blog-item {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.blog-item h3 {
+    font-size: 1.4rem;
+    color: #1B5E20;
+    margin-bottom: 0.5rem;
+}
+
+.blog-item p {
+    font-size: 1rem;
+    color: #616161;
+    margin-bottom: 1rem;
+}
+
+.blog-item .button {
+    padding: 0.8rem 1.5rem;
+}
+
