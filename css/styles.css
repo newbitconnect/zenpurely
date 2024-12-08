@@ -499,6 +499,7 @@ nav {
    =================== */
 .follow-tiktok {
     text-align: center;
+    display: block; /* Asegúrate de que el contenedor sea visible */
     margin: 20px 0;
 }
 
