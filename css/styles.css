@@ -1,3 +1,56 @@
+/* Sección de Horóscopo Negro */
+#horoscope {
+    background-color: #ECEFF1; /* Fondo gris claro */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.horoscope-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#horoscope h2 {
+    font-size: 3rem; /* Mismo tamaño que Respira y Despierta */
+    color: #263238; /* Gris oscuro */
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.description {
+    font-size: 1.4rem;
+    color: #37474F; /* Gris profundo */
+    margin-bottom: 3rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.video-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 1rem 0;
+    justify-content: center;
+}
+
+.video-item {
+    flex: 0 0 315px; /* Ancho para formato 9:16 */
+    height: 560px; /* Altura para formato 9:16 */
+    scroll-snap-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
 /* Sección de Brutally Honest */
 #tiktok {
     background-color: #FBE9E7; /* Fondo cálido y energizante */
