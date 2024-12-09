@@ -849,7 +849,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Evento para alternar el estado del menú
         menuToggle.addEventListener("click", () => {
-            menuToggle.classList.toggle("active"); // Cambia el estado del botón
             menu.classList.toggle("active"); // Muestra u oculta el menú
         });
 
@@ -857,7 +856,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const menuLinks = document.querySelectorAll(".menu li a");
         menuLinks.forEach((link) => {
             link.addEventListener("click", () => {
-                menuToggle.classList.remove("active");
                 menu.classList.remove("active");
             });
         });
