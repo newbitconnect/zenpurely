@@ -394,6 +394,90 @@ nav {
             gap: 1rem;
         }
     }
+       <style>
+    #tiktok {
+        background-color: #FFEBEE; /* Fondo rosado claro */
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+
+    #tiktok h2 {
+        font-size: 3rem;
+        color: #C62828; /* Rojo oscuro */
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    #tiktok .description {
+        font-size: 1.4rem;
+        color: #E53935; /* Rojo medio */
+        margin-bottom: 2rem;
+        line-height: 1.8;
+    }
+
+    .tiktok-carousel {
+        display: flex;
+        justify-content: flex-start; /* Alinea los videos al inicio */
+        overflow-x: auto; /* Activa desplazamiento horizontal si es necesario */
+        scroll-snap-type: x mandatory; /* Scroll "suave" */
+        gap: 1rem;
+        padding: 1rem;
+        white-space: nowrap; /* Evita que los elementos se envuelvan */
+    }
+
+    .tiktok-item {
+        flex: 0 0 auto;
+        width: 300px; /* Tamaño fijo */
+        height: auto; /* Altura automática */
+        aspect-ratio: 9 / 16; /* Mantiene la relación de aspecto */
+        scroll-snap-align: center; /* Asegura alineación al deslizar */
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        overflow: hidden;
+        background-color: #FFCDD2; /* Fondo rosado más claro */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tiktok-item iframe {
+        width: 100%; /* Ocupa el ancho del contenedor */
+        height: 100%; /* Ajusta la altura al contenedor */
+        border: none; /* Sin bordes */
+    }
+
+    .follow-btn {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #ffffff; /* Letras blancas */
+        background: #E53935; /* Fondo rojo medio */
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        margin-top: 20px;
+    }
+
+    .follow-btn:hover {
+        background: #C62828; /* Rojo más oscuro */
+        transform: scale(1.1); /* Efecto de ampliación */
+    }
+
+    @media (max-width: 768px) {
+        .tiktok-carousel {
+            width: 90%; /* Se ajusta al ancho del dispositivo */
+            gap: 0.5rem; /* Mantén al menos 1rem */
+        }
+
+        .tiktok-item {
+            flex: 0 0 80%; /* Reduce ligeramente el ancho */
+        }
+    }
+</style>
+
 </style>
  
 </head>
