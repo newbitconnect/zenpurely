@@ -211,6 +211,10 @@ nav {
     }
 
     .product-item img {
+        max-width: 100%; /* Asegura que no se desborde */
+        height: auto; /* Mantén la proporción de aspecto */
+        max-height: 200px; /* Define una altura máxima para que no sean demasiado grandes */
+        object-fit: cover; /* Ajusta cómo se recorta la imagen si es necesario */
         border-radius: 10px;
         margin-bottom: 1rem;
     }
