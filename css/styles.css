@@ -565,6 +565,25 @@ nav {
     height: 100%; /* Ajusta la altura al contenedor */
     border: none; /* Sin bordes */
 }
+.subscribe-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff; /* Letras blancas */
+    background: #4CAF50; /* Fondo verde predeterminado */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.subscribe-btn:hover {
+    background: #388E3C; /* Fondo más oscuro */
+    transform: scale(1.1); /* Efecto de ampliación */
+}
 
 /* Ajustes responsivos */
 @media (max-width: 768px) {
