@@ -242,6 +242,82 @@ nav {
         background: linear-gradient(90deg, #388E3C, #66BB6A);
         transform: scale(1.05);
     } 
+     #horoscope {
+        background-color: #FAF3E0; /* Fondo beige claro */
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+
+    #horoscope h2 {
+        font-size: 3rem;
+        color: #4E342E; /* Marrón oscuro */
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    #horoscope .description {
+        font-size: 1.4rem;
+        color: #6D4C41; /* Marrón medio */
+        margin-bottom: 2rem;
+        line-height: 1.8;
+    }
+
+    .video-carousel {
+        display: flex;
+        justify-content: flex-start; /* Alinea los videos al inicio */
+        overflow-x: auto; /* Activa el desplazamiento horizontal */
+        scroll-snap-type: x mandatory; /* Scroll "suave" */
+        gap: 1rem;
+        padding: 1rem;
+        white-space: nowrap; /* Evita que los elementos se envuelvan */
+    }
+
+    .video-item {
+        flex: 0 0 560px; /* Tamaño fijo en formato 16:9 */
+        height: 315px;
+        scroll-snap-align: center; /* Asegura alineación al deslizar */
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        overflow: hidden;
+        background-color: #E3F2FD; /* Fondo azul claro */
+    }
+
+    .video-item iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .subscribe-btn {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #ffffff; /* Letras blancas */
+        background: #6D4C41; /* Marrón oscuro */
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        margin-top: 20px;
+    }
+
+    .subscribe-btn:hover {
+        background: #8D6E63; /* Marrón más claro */
+        transform: scale(1.1); /* Efecto de ampliación */
+    }
+
+    @media (max-width: 768px) {
+        .video-item {
+            flex: 0 0 90%; /* Reduce el tamaño en pantallas pequeñas */
+            height: auto; /* Ajusta la altura automáticamente */
+        }
+
+        .video-carousel {
+            gap: 1rem;
+        }
+    }  
 </style>
  
 </head>
