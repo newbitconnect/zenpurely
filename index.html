@@ -134,6 +134,43 @@ nav {
         max-height: 0;
         opacity: 0;
     }
+      <style>
+    #image-scroll {
+        background-color: #F9FBE7;
+        padding: 2rem 0;
+        overflow: hidden;
+    }
+
+    .scroll-container {
+        display: flex;
+        gap: 1.5rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 1rem;
+    }
+
+    .scroll-item {
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .scroll-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .scroll-item img:hover {
+        transform: scale(1.05);
+        transition: transform 0.5s ease;
+    }
+</style>
+ 
   </style>
 </head>
 <body>
@@ -168,6 +205,33 @@ nav {
             <li><a href="#ynf-method">Baja de Peso</a></li>
         </ul>
     </nav>
+    <section id="home">
+    <div class="home-container">
+        <h2>🌿 Bienvenido a <span class="highlight">ZenPurely</span> 🌟</h2>
+        <p class="description">
+            Descubre el arte del equilibrio 🌸. En ZenPurely, te guiamos hacia un estilo de vida más saludable 🌱, con productos inspiradores, meditaciones guiadas 🧘 y consejos que transforman tu bienestar. ✨
+        </p>
+        <a href="#store" class="button">🌟 Explorar la Tienda 🌟</a>
+    </div>
+    <!-- Carrusel de Imágenes -->
+    <section id="image-scroll">
+        <div class="scroll-container">
+            <div class="scroll-item">
+                <img src="img/zen1.png" alt="Zen Garden">
+            </div>
+            <div class="scroll-item">
+                <img src="img/zen2.png" alt="Meditation Setup">
+            </div>
+            <div class="scroll-item">
+                <img src="img/zen3.png" alt="Zen Tea Space">
+            </div>
+            <div class="scroll-item">
+                <img src="img/zen4.png" alt="Zen Landscape">
+            </div>
+        </div>
+    </section>
+</section>
+
 </header>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
