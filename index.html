@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre el equilibrio perfecto con ZenPurely. Productos de bienestar, meditaciones guiadas y consejos para transformar tu vida.">
+    <meta name="keywords" content="Zen, bienestar, meditación, mindfulness, productos Zen, equilibrio, vida saludable">
+    <meta name="author" content="ZenPurely">
+    <title>ZenPurely | Bienestar, Meditación y Mindfulness</title>
+   <style>
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #A8E6CF;
+    color: #fff;
+}
+
+/* Logotipo */
+.logo img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #4CAF50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: -50px;
+    background-color: #FFF;
+}
+
+/* Menú */
+nav {
+    background-color: #E8F5E9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    color: #1B5E20;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #A5D6A7;
+    color: #FFFFFF;
+    transform: scale(1.1);
+}
+
+/* Menú móvil */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #A5D6A7;
+        width: 100%;
+        padding: 1rem 0;
+        z-index: 1000;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .menu li a {
+        color: #FFFFFF;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        background-color: #A5D6A7;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-toggle .bar {
+        background-color: #1B5E20;
+        height: 3px;
+        width: 25px;
+        margin: 3px 0;
+    }
+
+    .menu-toggle:hover {
+        background-color: #81C784;
+        transform: scale(1.1);
+    }
+}
+ /* Transición suave para el menú móvil */
+    .menu {
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        overflow: hidden;
+    }
+
+    .menu.active {
+        max-height: 500px; /* Ajusta según la cantidad de enlaces */
+        opacity: 1;
+    }
+
+    .menu:not(.active) {
+        max-height: 0;
+        opacity: 0;
+    }
+  </style>
+</head>
+<body>
+    <!-- Aquí se integrará el contenido -->
+<header id="main-header">
+    <!-- Logotipo -->
+    <div class="logo">
+        <img src="img/logo.png" alt="ZenPurely Logo">
+    </div>
+
+    <!-- Título Principal -->
+    <div class="section-container">
+        <h2>🌟 Explorando el <span class="highlight">Zen</span> 🌿</h2>
+        <p class="description">
+            Descubre cómo <strong>ZenPurely</strong> transforma tu vida con productos y prácticas de bienestar. 🌸🌟 Encuentra inspiración y calma en cada rincón. 🧘‍♀️✨
+        </p>
+    </div>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="menu">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#store">Tienda</a></li>
+            <li><a href="#horoscope">Horóscopo</a></li>
+            <li><a href="#youtube">Meditación</a></li>
+            <li><a href="#tiktok">Motivación</a></li>
+            <li><a href="#ynf-method">Baja de Peso</a></li>
+        </ul>
+    </nav>
+</header>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle"); // Selecciona el botón
+        const menu = document.querySelector(".menu"); // Selecciona el menú
+
+        // Evento para alternar el estado del menú
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("active"); // Cambia el estado del botón
+            menu.classList.toggle("active"); // Muestra u oculta el menú
+        });
+
+        // Opcional: Cierra el menú al hacer clic en un enlace
+        const menuLinks = document.querySelectorAll(".menu li a");
+        menuLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                menuToggle.classList.remove("active");
+                menu.classList.remove("active");
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
