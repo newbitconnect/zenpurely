@@ -552,6 +552,69 @@ nav {
             max-width: 100%; /* Se adapta a pantallas pequeñas */
         }
     }
+    footer {
+        background-color: #2E7D32; /* Verde oscuro */
+        color: #FFFFFF;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap; /* Soporte para pantallas pequeñas */
+        justify-content: space-between;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-container div {
+        flex: 1 1 30%; /* Ocupa espacio proporcional */
+    }
+
+    .footer-info h3, .footer-links h3, .footer-social h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-info p {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .footer-links ul, .footer-social ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links ul li, .footer-social ul li {
+        margin: 0.5rem 0;
+    }
+
+    .footer-links ul li a, .footer-social ul li a {
+        color: #81C784; /* Verde claro */
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links ul li a:hover, .footer-social ul li a:hover {
+        color: #FFFFFF; /* Blanco al pasar el ratón */
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-container div {
+            flex: 1 1 100%;
+        }
+    }   
 </style>
 
 </style>
