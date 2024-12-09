@@ -862,6 +862,36 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+document.addEventListener("DOMContentLoaded", () => {
+    const leafContainer = document.createElement("div");
+    leafContainer.className = "leaf-confetti";
+    document.body.appendChild(leafContainer);
+
+    const createLeaf = () => {
+        const leaf = document.createElement("div");
+        leaf.className = "leaf";
+        leaf.style.left = `${Math.random() * 100}%`;
+        leaf.style.animationDuration = `${Math.random() * 5 + 5}s`;
+        leaf.style.animationDelay = `${Math.random() * 5}s`;
+        leafContainer.appendChild(leaf);
+
+        // Eliminar las hojas después de la animación para evitar acumulación
+        setTimeout(() => {
+            leaf.remove();
+        }, 10000); // Coincide con la duración de la animación
+    };
+
+    // Generar hojas continuamente por 10 segundos
+    const interval = setInterval(() => {
+        createLeaf();
+    }, 200);
+
+    // Detener la generación después de 10 segundos
+    setTimeout(() => {
+        clearInterval(interval);
+    }, 10000);
+});
+    
 </script>
 <footer>
     <div class="footer-container">
