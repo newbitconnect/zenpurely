@@ -617,7 +617,53 @@ nav {
             flex: 1 1 100%;
         }
     }   
+/* Contenedor del efecto */
+.leaf-confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
 
+/* Estilo de cada hoja */
+.leaf {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    animation: fall 10s linear infinite;
+    opacity: 0.8;
+}
+
+/* Animación de caída */
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Diferentes tamaños y colores para las hojas */
+.leaf:nth-child(odd) {
+    background-color: #4CAF50; /* Verde brillante */
+    width: 8px;
+    height: 8px;
+}
+
+.leaf:nth-child(even) {
+    background-color: #81C784; /* Verde claro */
+    width: 12px;
+    height: 12px;
+}
 </style>
  
 </head>
