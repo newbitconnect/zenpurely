@@ -16,13 +16,13 @@
 }
 
 /* Específico para #home */
-       #home {
-    background-color: #E8F5E9;
-    padding: 4rem 2rem;
+     #home {
+    padding: 6rem 2rem; /* Aumenta el espacio superior e inferior */
+    padding-top: calc(150px / 2); /* Alinea con la mitad del tamaño del logotipo */
+    background-color: #E8F5E9; /* Fondo verde claro */
     text-align: center;
-    margin-top: -75px; /* Ajusta este valor para que empiece a la mitad del logotipo */
     position: relative;
-    z-index: 1; /* Asegura que no cubra el header */
+    z-index: 1;
 }
 
 #home h2 {
@@ -32,11 +32,35 @@
     font-weight: bold;
 }
 
-.home-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem; /* Añadir un padding interno si es necesario */
+#home .description {
+    font-size: 1.6rem; /* Tamaño ligeramente mayor */
+    color: #4E342E; /* Marrón oscuro */
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    text-align: center;
 }
+
+#home .button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(90deg, #4CAF50, #81C784);
+    color: #FFF8E1; /* Blanco suave */
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+#home .button:hover {
+    background: linear-gradient(90deg, #388E3C, #66BB6A);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
 
 /* Carrusel de Imágenes */
 .scroll-container {
