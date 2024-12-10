@@ -145,156 +145,83 @@ header {
     background-color: #FFF;
 }
 
-/* Menú */
-nav {
-    background-color: #E8F5E9;
+/* Nuevo Menú */
+.new-menu {
     display: flex;
-    flex-direction: row; /* Coloca los elementos en fila */
-    list-style: none; /* Sin viñetas */
-    gap: 1.5rem; /* Espaciado entre elementos */
-    margin: 0;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.menu {
-    display: flex;
     list-style: none;
-    gap: 2rem;
+    background: linear-gradient(90deg, #4CAF50, #81C784); /* Fondo gradiente */
+    padding: 1rem 2rem;
     margin: 0;
-    padding: 0;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.menu li a {
-    color: #1B5E20;
-    font-size: 1.1rem;
+.new-menu li {
+    margin: 0 1.5rem; /* Espaciado entre enlaces */
+}
+
+.new-menu li a {
+    color: #FFF8E1; /* Texto en blanco suave */
+    font-size: 1.2rem;
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.menu li a:hover {
-    background-color: #A5D6A7;
-    color: #FFFFFF;
-    transform: scale(1.1);
+.new-menu li a:hover {
+    color: #FFD54F; /* Amarillo al pasar el ratón */
+    transform: scale(1.1); /* Ligeramente más grande */
 }
-/* Asegura que el botón móvil no se muestre en pantallas grandes */
-.menu-toggle {
-    display: none; /* Oculta el botón del menú en pantallas grandes */
-}
-       
-/* Menú móvil */
+
+/* Para dispositivos móviles */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background-color: #A5D6A7;
-        width: 100%;
-        padding: 1rem 0;
-        z-index: 1000;
-        border-radius: 0 0 10px 10px;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu li {
-        text-align: center;
-        margin: 1rem 0;
-    }
-
-    .menu li a {
-        color: #FFFFFF;
-    }
-
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        justify-content: center;
-        align-items: center;
-        width: 35px;
-        height: 35px;
-        background-color: #A5D6A7;
-        border-radius: 5px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .menu-toggle .bar {
-        background-color: #1B5E20;
-        height: 3px;
-        width: 25px;
-        margin: 3px 0;
-    }
-
-    .menu-toggle:hover {
-        background-color: #81C784;
-        transform: scale(1.1);
-    }
-}
- /* Transición suave para el menú móvil */
-    .menu {
-        transition: max-height 0.3s ease, opacity 0.3s ease;
-        overflow: hidden;
-    }
-
-    .menu.active {
-        max-height: 500px; /* Ajusta según la cantidad de enlaces */
-        opacity: 1;
-    }
-
-    .menu:not(.active) {
-        max-height: 0;
-        opacity: 0;
-    }
-
-    #image-scroll {
-        background-color: #F9FBE7;
-        padding: 2rem 0;
-        overflow: hidden;
-    }
-
-    .scroll-container {
-        display: flex;
-        gap: 1.5rem;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
+    .new-menu {
+        flex-direction: column; /* Columna para pantallas pequeñas */
         padding: 1rem;
     }
 
-    .scroll-item {
-        flex: 0 0 auto;
-        scroll-snap-align: center;
-        width: 300px;
-        height: 300px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    .new-menu li {
+        margin: 1rem 0; /* Espaciado vertical */
+    }
+}
+/* Botón de Menú para móvil */
+.menu-toggle {
+    display: none; /* Por defecto no visible */
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #FFF8E1;
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Visible en móvil */
     }
 
-    .scroll-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
+    .new-menu {
+        display: none; /* Ocultar por defecto */
+        flex-direction: column;
     }
 
-    .scroll-item img:hover {
-        transform: scale(1.05);
-        transition: transform 0.5s ease;
+    .new-menu.active {
+        display: flex; /* Mostrar menú al activar */
     }
+}
+
       /* Contenedor principal de la tienda */
 #store {
     background-color: #F9FBE7;
