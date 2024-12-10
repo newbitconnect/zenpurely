@@ -929,22 +929,14 @@ header {
 </header>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle"); // Botón del menú móvil
-    const menu = document.querySelector(".menu"); // Menú principal
+    const menuToggle = document.querySelector(".menu-toggle");
+    const newMenu = document.querySelector(".new-menu");
 
-    // Alternar el estado del menú móvil
     menuToggle.addEventListener("click", () => {
-        menu.classList.toggle("active");
-    });
-
-    // Cerrar el menú móvil al hacer clic en un enlace
-    const menuLinks = document.querySelectorAll(".menu li a");
-    menuLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            menu.classList.remove("active");
-        });
+        newMenu.classList.toggle("active");
     });
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const leafContainer = document.createElement("div");
