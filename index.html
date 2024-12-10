@@ -1002,22 +1002,23 @@ nav {
 </header>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.querySelector(".menu-toggle"); // Selecciona el botón
-        const menu = document.querySelector(".menu"); // Selecciona el menú
+    const menuToggle = document.querySelector(".menu-toggle"); // Botón del menú móvil
+    const menu = document.querySelector(".menu"); // Menú principal
 
-        // Evento para alternar el estado del menú
-        menuToggle.addEventListener("click", () => {
-            menu.classList.toggle("active"); // Muestra u oculta el menú
-        });
+    // Alternar el estado del menú móvil
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
 
-        // Opcional: Cierra el menú al hacer clic en un enlace
-        const menuLinks = document.querySelectorAll(".menu li a");
-        menuLinks.forEach((link) => {
-            link.addEventListener("click", () => {
-                menu.classList.remove("active");
-            });
+    // Cerrar el menú móvil al hacer clic en un enlace
+    const menuLinks = document.querySelectorAll(".menu li a");
+    menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("active");
         });
     });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const leafContainer = document.createElement("div");
     leafContainer.className = "leaf-confetti";
