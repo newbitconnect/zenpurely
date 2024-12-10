@@ -756,7 +756,78 @@ header {
 .gallery-item:hover img {
     transform: scale(1.05);
 }
-     
+     #focus-areas {
+    background-color: #F9FBE7; /* Fondo claro */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#focus-areas h2 {
+    font-size: 2.5rem;
+    color: #1B5E20; /* Verde oscuro */
+    margin-bottom: 1.5rem;
+}
+
+#focus-areas .description {
+    font-size: 1.4rem;
+    color: #4E342E; /* Marrón oscuro */
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.focus-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem; /* Espaciado entre tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas pequeñas */
+}
+
+.focus-card {
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    flex: 1 1 30%; /* Cada tarjeta ocupa 30% del ancho disponible */
+    max-width: 300px; /* Ancho máximo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.focus-card img {
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: 200px; /* Altura fija */
+    object-fit: cover; /* Recorta y ajusta la imagen */
+}
+
+.focus-card h3 {
+    font-size: 1.5rem;
+    color: #2E7D32; /* Verde oscuro */
+    margin: 1rem 0;
+}
+
+.focus-card p {
+    font-size: 1rem;
+    color: #616161; /* Gris oscuro */
+    margin: 0 1rem 1rem;
+}
+
+.focus-card:hover {
+    transform: scale(1.05); /* Efecto de ampliación */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .focus-container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .focus-card {
+        max-width: 90%; /* Ajusta el tamaño al ancho del dispositivo */
+    }
+}
+
 
     footer {
         background-color: #2E7D32; /* Verde oscuro */
