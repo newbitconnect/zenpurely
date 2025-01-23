@@ -94,23 +94,94 @@ header .social-icons a {
     border-radius: 5px;
 }
 
-/* Tienda Section */
-#tienda {
-    padding: 2rem;
+/* Estilo general para la sección de la tienda */
+#store {
+    background-color: #E8F5E9; /* Fondo verde claro */
+    padding: 4rem 2rem;
     text-align: center;
-    background: #FFF;
 }
 
-.store-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.section-title {
+    font-size: 2.5rem;
+    color: #1B5E20; /* Verde oscuro */
+    margin-bottom: 2rem;
+}
+
+/* Grid para los productos */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    justify-content: center;
 }
 
-.product img {
-    width: 100%;
-    border-radius: 5px;
+/* Estilo para cada producto */
+.product-item {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Efecto hover en el producto */
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen del producto */
+.product-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Título del producto */
+.product-title {
+    font-size: 1.5rem;
+    color: #2E7D32;
+    margin-bottom: 0.5rem;
+}
+
+/* Descripción del producto */
+.product-description {
+    font-size: 1rem;
+    color: #616161;
+    margin-bottom: 1rem;
+}
+
+/* Precio del producto */
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1B5E20;
+    margin-bottom: 1rem;
+}
+
+/* Botón de compra */
+.button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(90deg, #4CAF50, #81C784);
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #388E3C, #66BB6A);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Blog Section */
 #blog {
