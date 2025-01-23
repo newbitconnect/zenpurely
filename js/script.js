@@ -24,3 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Simulación de agregar al carrito
+document.querySelectorAll('.button').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Producto añadido al carrito');
+    });
+});
+
